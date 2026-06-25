@@ -6,6 +6,22 @@ A collection of personal shell scripts and utilities to speed up daily workflows
 
 ## Tools
 
+### `gitlab-clone` — Clone GitLab repo via env credentials
+
+Clona un repository GitLab usando credenziali lette da variabili d'ambiente.
+
+#### Usage
+
+```bash
+GITLAB_USER="<username>" GITLAB_PASS="<password-or-token>" ./gitlab-clone.sh <gitlab-repo-url> [target-dir]
+```
+
+#### Requisiti
+
+- `GITLAB_USER` impostata
+- `GITLAB_PASS` impostata
+- URL repository in formato `http://...` o `https://...`
+
 ### `klog` — Quick Kubernetes Pod Log Viewer
 
 Quickly tail logs from a Kubernetes pod by providing just a fragment of its name. If multiple pods match, an interactive selector (via `fzf`) lets you pick the right one.
