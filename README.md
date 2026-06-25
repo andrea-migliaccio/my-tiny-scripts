@@ -13,13 +13,13 @@ Clona un repository GitLab usando credenziali lette da variabili d'ambiente.
 #### Usage
 
 ```bash
-GITLAB_USER="<username>" GITLAB_PASS="<password-or-token>" ./gitlab-clone.sh <gitlab-repo-url> [target-dir]
+GITLAB_USER="<username>" GITLAB_PAT="<password-or-token>" ./gitlab-clone.sh <gitlab-repo-url> [target-dir]
 ```
 
 #### Requisiti
 
 - `GITLAB_USER` impostata
-- `GITLAB_PASS` impostata
+- `GITLAB_PAT` impostata
 - URL repository in formato `http://...` o `https://...`
 
 ### `klog` — Quick Kubernetes Pod Log Viewer

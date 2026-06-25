@@ -15,8 +15,8 @@ if [[ -z "${GITLAB_USER:-}" ]]; then
     exit 1
 fi
 
-if [[ -z "${GITLAB_PASS:-}" ]]; then
-    echo "Errore: variabile d'ambiente GITLAB_PASS non impostata"
+if [[ -z "${GITLAB_PAT:-}" ]]; then
+    echo "Errore: variabile d'ambiente GITLAB_PAT non impostata"
     exit 1
 fi
 
@@ -48,7 +48,7 @@ URL_NO_SCHEME="${URL_NO_SCHEME#https://}"
 URL_NO_AUTH="${URL_NO_SCHEME#*@}"
 
 ENC_USER="$(urlencode "$GITLAB_USER")"
-ENC_PASS="$(urlencode "$GITLAB_PASS")"
+ENC_PASS="$(urlencode "$GITLAB_PAT")"
 AUTH_URL="https://${ENC_USER}:${ENC_PASS}@${URL_NO_AUTH}"
 
 if [[ -n "$TARGET_DIR" ]]; then
